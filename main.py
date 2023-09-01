@@ -119,7 +119,7 @@ ar_model_log = AutoReg(df["Log_Hashrate"], lags=2).fit()
 print('log of hashrate AR model')
 print(ar_model_log.summary())
 
-month_predict = 65
+month_predict = 71
 future_hashratelog_ar = ar_model_log.predict(start=len(df), end=len(df) + month_predict)
 
 # 2. Develop SARIMAX model using log-transformed values
